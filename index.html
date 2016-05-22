@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+<title>Monte</title>
+<link rel="stylesheet" type="text/css" href="monte.css">
+<meta charset="UTF-8" />
+</head>
+<body>
+<header>
+    <h1>Mont<span class="e">e</span></h1><h2>Building a better Blub</h2>
+</header>
+    <nav>
+        <a href="http://monte.readthedocs.org/en/latest/intro.html">Monte</a><a href="http://monte.readthedocs.org/en/latest/index.html">Documentation</a><a href="index.html#IRC">Contact</a>
+    </nav>
+
+
+<article>
+<p><dfn>Monte</dfn> is a nascent dynamic programming language reminiscent of
+<a href="https://python.org/">Python</a> and <a
+   href="http://erights.org/">E</a>. It is based upon <em>The Principle of
+   Least Authority</em> (<abbr title="Principle of Least Authority">POLA</abbr>),
+   which governs interactions between objects, and a <em>capability-based
+       object model</em>, which grants certain essential safety guarantees to
+   all objects.</p>
+<p>Here's what Monte looks like:</p>
+
+<div class="highlight"><pre><span class="kd">def</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">:</span><span class="kt">Int</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span>
+<span class="nb">traceln</span><span class="p">(</span><span class="sb">`x = </span><span class="si">$x</span><span class="sb">`</span><span class="p">)</span>
+<span class="kd">def</span><span class="w"> </span><span class="n">isEven</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="kt">Bool</span><span class="p">:</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span>
+<span class="kd">var</span><span class="w"> </span><span class="n">wondrous</span><span class="w"> </span><span class="p">:</span><span class="kt">Int</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">27</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">wondrous</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="nb">traceln</span><span class="p">(</span><span class="sb">`wondrous = </span><span class="si">$wondrous</span><span class="sb">`</span><span class="p">)</span>
+<span class="w">    </span><span class="n">wondrous</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isEven</span><span class="p">(</span><span class="n">wondrous</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="n">wondrous</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="n">wondrous</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
+<span class="kd">def</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="p">:</span><span class="kt">Str</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s2">&quot;This string is in Monte (/ˈmɔːntiː/)&quot;</span>
+<span class="kd">def</span><span class="w"> </span><span class="sb">`This </span><span class="si">@thing</span><span class="sb"> is in </span><span class="si">@{language :Str}</span><span class="sb">`</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">greeting</span>
+<span class="p">[</span><span class="n">thing</span><span class="p">,</span><span class="w"> </span><span class="n">language</span><span class="p">]</span>
+</pre></div>
+
+<p>Monte is designed for <em>agoric systems</em>, promotes <em>secure
+    distributed computation</em>, and is focused on <em>readability</em> and
+<em>clarity</em>.</p>
+
+<p>Monte's design incorporates:</p>
+<dl>
+    <dt>Guard-based Type System</dt>
+    <dd>Values are typed according to <dfn>guards</dfn>, which are objects
+    that describe the behavior of values.</dd>
+    <dt>Readable &amp; Auditable Syntax</dt>
+    <dd>Python-inspired syntax includes customizeable pattern matching and
+    object literals, while semantic features like static lexical scoping and
+    left-to-right evaluation aid code review.</dd>
+    <dt>Builtin Concurrency</dt>
+    <dd>First-class promises and syntax for eventual message passing
+    facilitate a natural and simple set of idioms for highly concurrent
+    systems.</dd>
+</dl>
+
+<p>Additional boons of Monte include:</p>
+<ul>
+<li>Quasiliteral syntax, including quasiliteral patterns and an extensible
+    interface</li>
+<li>Composition-based inheritance</li>
+<li>Immutable and persistent core data structures</li>
+<li>Parameterized modules</li>
+<li>Audition-based proving of customized object behaviors</li>
+</ul>
+    <div><a href="http://monte.readthedocs.org/en/latest/intro.html">
+        Click here for more information.
+    </a></div>
+    
+    <div><a href="http://monte.readthedocs.org/en/latest/index.html">
+        Click here to see the documentation.
+    </a></div>
+<h2 id="IRC">IRC</h2><p>We're on <a href="http://freenode.net/">Freenode</a> in <a href="irc://irc.freenode.net/#monte">#monte</a>.</p>
+</article>
+<footer>
+    Monte documentation ©2015 the Monte authors. Licensed under CC0. Please
+    see <a
+        href="https://github.com/monte-language/monte-language.github.io/blob/master/LICENSE">the
+        license page</a> for more details.
+</footer>
+
+</body></html>
